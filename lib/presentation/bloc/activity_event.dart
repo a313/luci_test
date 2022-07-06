@@ -17,5 +17,5 @@ class FilterActivityEvent extends ActivityEvent {
   final String action;
   final DateTime? startTime;
   final DateTime? endTime;
-  const FilterActivityEvent(this.action, this.startTime, this.endTime);
+  const FilterActivityEvent(this.action, {this.startTime, this.endTime});
 }

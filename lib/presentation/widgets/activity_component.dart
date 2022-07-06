@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_sticky_header/flutter_sticky_header.dart';
@@ -23,6 +24,8 @@ class ActivityComponent extends StatelessWidget {
           return const LoadingWidget();
         } else if (state is ActivityLoaded) {
           return _ActivitiesWidget(state.activities);
+        } else if (state is ActivityFilter) {
+          return _ActivitiesWidget(state.filterData);
         } else if (state is ActivityError && state.failure is NetworkFailure) {
           return const NetworkErrorWidget();
         } else if (state is ActivityError && state.failure is ServerFailure) {
@@ -93,24 +96,25 @@ class SearchComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      children: [
-        Row(
-          children: [
-            Text(
-              "Tìm kiếm theo hành động",
-              style: AppFonts.size13(),
-            ),
-            SizedBox(width: 150, child: TextField()),
-          ],
-        ),
-        Row(
-          children: [
-            Text("Thời gian", style: AppFonts.size13()),
-            SizedBox(width: 50, child: TextField()),
-          ],
-        ),
-      ],
+    return Padding(
+      padding: PAD_SYM_H12,
+      child: Wrap(
+        spacing: 12.0,
+        crossAxisAlignment: WrapCrossAlignment.center,
+        children: [
+          Text(
+            "Tìm kiếm theo hành động",
+            style: AppFonts.size13(),
+          ),
+          SizedBox(
+              width: 200,
+              child: CupertinoSearchTextField(
+                onSubmitted: (action) {
+                  context.read<ActivityBloc>().add(FilterActivityEvent(action));
+                },
+              )),
+        ],
+      ),
     );
   }
 }

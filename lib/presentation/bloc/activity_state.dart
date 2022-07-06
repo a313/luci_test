@@ -14,6 +14,12 @@ class ActivityLoaded extends ActivityState {
   const ActivityLoaded(this.activities);
 }
 
+class ActivityFilter extends ActivityState {
+  final List<Activity> allData;
+  final List<Activity> filterData;
+  const ActivityFilter({required this.filterData, required this.allData});
+}
+
 class ActivityError extends ActivityState {
   final Failure failure;
 
