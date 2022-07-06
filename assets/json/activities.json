@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "action": "Chỉnh sửa thông tin bất động sản",
+        "time": 1657112345000
+    },
+    {
+        "id": 2,
+        "action": "Thêm mới bất động sản",
+        "time": 1657112345000
+    },
+    {
+        "id": 3,
+        "action": "Thêm mới bất động sản",
+        "time": 1657110345000
+    },
+    {
+        "id": 4,
+        "action": "Thêm mới bất động sản",
+        "time": 1657112045000
+    },
+    {
+        "id": 5,
+        "action": "Thêm mới bất động sản",
+        "time": 1657112345000
+    },
+    {
+        "id": 6,
+        "action": "Đăng nhập",
+        "time": 1657512345000
+    }
+]

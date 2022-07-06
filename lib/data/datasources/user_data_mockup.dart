@@ -1,3 +1,7 @@
+import 'dart:convert';
+
+import 'package:flutter/services.dart';
+
 import '../../domain/entities/user.dart';
 import '../models/activity_model.dart';
 import '../models/user_model.dart';
@@ -11,9 +15,10 @@ class UserDataSourceMockup implements UserDataSource {
   }
 
   @override
-  Future<List<ActivityModel>> getUserActivityHistory(int id) {
-    // TODO: implement getUserActivityHistory
-    throw UnimplementedError();
+  Future<List<ActivityModel>> getUserActivityHistory(int id) async {
+    final jsonStr = await rootBundle.loadString("assets/json/activities.json");
+    final activityList = jsonDecode(jsonStr) as List;
+    return activityList.map((e) => ActivityModel.fromMap(e)).toList();
   }
 
   @override

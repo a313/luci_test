@@ -20,8 +20,8 @@ void setup() {
 
   // Repository
   getIt.registerLazySingleton<UserRepository>(() => UserRepositoryImpl(
-        dataSource: getIt(),
-        networkInfo: getIt(),
+        dataSource: getIt<UserDataSource>(),
+        networkInfo: getIt<NetworkInfo>(),
       ));
 
   // Data sources
