@@ -1,7 +1,7 @@
-import 'package:demo_luci/core/util/util.dart';
-import 'package:demo_luci/injection.dart';
 import 'package:flutter/material.dart';
 
+import '../../injection.dart';
+import '../util/util.dart';
 import 'global_keys.dart';
 
 class BaseCommonWidgets {
