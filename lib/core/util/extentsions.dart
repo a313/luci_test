@@ -1,8 +1,9 @@
 import 'dart:math';
 
-import 'package:demo_luci/core/util/util.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+
+import 'enum.dart';
 
 extension NavExtension on NavigatorState {
   Future<T?> to<T extends Object?>(Widget page) {

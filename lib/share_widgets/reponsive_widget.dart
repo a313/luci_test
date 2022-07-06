@@ -23,6 +23,8 @@ class Reponsive extends StatelessWidget {
         return middleScene?.call(context) ?? smallScene(context);
       case ScreenType.big:
         return bigScene(context);
+      default:
+        return bigScene(context);
     }
   }
 }
