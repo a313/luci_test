@@ -1,3 +1,4 @@
+import '../../domain/entities/user.dart';
 import '../models/activity_model.dart';
 import '../models/user_model.dart';
 import 'user_data_source.dart';

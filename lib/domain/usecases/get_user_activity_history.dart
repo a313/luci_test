@@ -4,6 +4,7 @@ import 'package:equatable/equatable.dart';
 
 import '../../../../core/error/failures.dart';
 import '../../../../core/usecases/usecase.dart';
+import '../entities/activiy.dart';
 import '../repositories/user_repository.dart';
 
 class GetUserActivityHistory implements UseCase<List<Activity>, Params> {

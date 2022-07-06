@@ -1,10 +1,11 @@
-import 'package:demo_luci/core/error/failures.dart';
 import 'package:dartz/dartz.dart';
-import 'package:demo_luci/core/network/network_info.dart';
-import 'package:demo_luci/features/user/data/datasources/user_data_source.dart';
-import 'package:demo_luci/features/user/domain/entities/user.dart';
-import 'package:demo_luci/features/user/domain/entities/activiy.dart';
-import 'package:demo_luci/features/user/domain/repositories/user_repository.dart';
+
+import '../../core/error/failures.dart';
+import '../../core/network/network_info.dart';
+import '../../domain/entities/activiy.dart';
+import '../../domain/entities/user.dart';
+import '../../domain/repositories/user_repository.dart';
+import '../datasources/user_data_source.dart';
 
 class UserRepositoryImpl implements UserRepository {
   final UserDataSource dataSource;
@@ -16,8 +17,8 @@ class UserRepositoryImpl implements UserRepository {
   Future<Either<Failure, List<Activity>>> getUserActivityHistory(int id) async {
     if (await networkInfo.isConnected) {
       try {
-        final listActivity = await dataSource.getUserActivityHistory(id);
-        return Right(listActivity);
+        final activityList = await dataSource.getUserActivityHistory(id);
+        return Right(activityList);
       } catch (e) {
         return Left(ServerFailure());
       }
