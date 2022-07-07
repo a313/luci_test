@@ -9,9 +9,10 @@ import 'user_data_source.dart';
 
 class UserDataSourceMockup implements UserDataSource {
   @override
-  Future<List<UserModel>> getListUser() {
-    // TODO: implement getListUser
-    throw UnimplementedError();
+  Future<List<UserModel>> getListUser() async {
+    final jsonStr = await rootBundle.loadString("assets/json/user.json");
+    final userList = jsonDecode(jsonStr) as List;
+    return userList.map((e) => UserModel.fromJson(e)).toList();
   }
 
   @override
