@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:luci_test/core/util/constants.dart';
+import 'package:luci_test/domain/entities/user.dart';
 import 'package:luci_test/share_widgets/optional_dropdown_widget.dart';
-import 'package:luci_test/theme/app_fonts.dart';
+
+import '../../pages/user_detail/bloc/user/user_bloc.dart';
+import 'user_component.dart';
 
 const options = <String>[
   'Đang hoạt động',
@@ -12,43 +16,40 @@ const options = <String>[
 class PersonalInformation extends StatelessWidget {
   const PersonalInformation({
     Key? key,
+    this.user,
   }) : super(key: key);
+  final User? user;
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<UserBloc, UserState>(
+      builder: (context, state) {
+        if (state is UserInitial) {
+          return const _PersonalInformation();
+        } else if (state is UserLoaded) {
+          return _PersonalInformation(user: state.user);
+        } else {
+          return const _PersonalInformation();
+        }
+      },
+    );
+  }
+}
+
+class _PersonalInformation extends StatelessWidget {
+  const _PersonalInformation({
+    Key? key,
+    this.user,
+  }) : super(key: key);
+
+  final User? user;
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
+    return Wrap(
+      runAlignment: WrapAlignment.spaceBetween,
+      crossAxisAlignment: WrapCrossAlignment.end,
       children: [
-        const CircleAvatar(
-          backgroundImage: NetworkImage(
-              'https://i.vietgiaitri.com/2012/5/3/xem-nuoc-mat-va-nu-cuoi-cua-kang-min-kyung-yoon-jung-hee-5d0128.jpg'),
-        ),
-        SIZED_BOX_W12,
-        Expanded(
-          child: Center(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Hoàng Thu Hiền',
-                  style: AppFonts.size15(fontWeight: FontWeight.bold),
-                ),
-                SIZED_BOX_H04,
-                Text(
-                  'Kế toán trưởng',
-                  style: AppFonts.size11(),
-                ),
-                SIZED_BOX_H04,
-                Text(
-                  'Đang hoạt động',
-                  style: AppFonts.size11(),
-                ),
-              ],
-            ),
-          ),
-        ),
-        SIZED_BOX_W08,
+        UserComponent(user: user),
         const OptionalDropDownWidget(
           titleOptional: 'Tùy chọn',
           options: options,

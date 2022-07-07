@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:luci_test/presentation/bloc/activity_bloc.dart';
-import 'package:luci_test/presentation/widgets/activity_component.dart';
+import 'package:luci_test/core/util/util.dart';
+import 'package:luci_test/domain/usecases/get_user_by_id.dart';
+import 'package:luci_test/presentation/pages/user_detail/bloc/user/user_bloc.dart';
+
 import 'package:luci_test/presentation/widgets/job_infomation/job_information_component.dart';
+import 'package:luci_test/presentation/widgets/profile_component/personal_information.dart';
 import 'package:luci_test/presentation/widgets/profile_component/profile_component.dart';
 import 'package:luci_test/share_widgets/reponsive_widget.dart';
+
+import 'bloc/activity/activity_bloc.dart';
+import 'widgets/activity_component.dart';
 
 class UserDetailPage extends StatefulWidget {
   final int userId;
@@ -21,6 +27,7 @@ class _UserDetailPageState extends State<UserDetailPage> {
     context
         .read<ActivityBloc>()
         .add(GetUserActivityHistoryEvent(widget.userId));
+    context.read<UserBloc>().add(GetUserByIdEvent(widget.userId));
   }
 
   @override
@@ -30,18 +37,27 @@ class _UserDetailPageState extends State<UserDetailPage> {
           smallScene: (context) => const ActivityComponent(),
           bigScene: (context) => Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Expanded(
                     flex: 3,
-                    child: ProfileComponent(),
+                    child: SingleChildScrollView(
+                      child: Column(
+                        children: const [
+                          PersonalInformation(),
+                          SIZED_BOX_H12,
+                          ProfileComponent(),
+                        ],
+                      ),
+                    ),
                   ),
-                  Expanded(
+                  const Expanded(
                     flex: 7,
                     child: ActivityComponent(),
                   ),
-                  Expanded(
+                  const Expanded(
                     flex: 3,
-                    child: JobInformationComponent(),
+                    child:
+                        SingleChildScrollView(child: JobInformationComponent()),
                   ),
                 ],
               )),
