@@ -54,7 +54,7 @@ class _ActivitiesWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Lịch sử hoạt đông",
+          "Lịch sử hoạt động",
           style: AppFonts.size24(),
         ),
         const Divider(),

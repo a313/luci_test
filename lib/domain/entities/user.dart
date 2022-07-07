@@ -57,6 +57,9 @@ class User extends Equatable {
   @JsonKey(name: "two_auth")
   final bool twoFactorAuthentication;
 
+  @JsonKey(name: "note")
+  final String note;
+
   const User(
       {required this.id,
       required this.avt,
@@ -75,6 +78,7 @@ class User extends Equatable {
       required this.accountStatus,
       required this.level,
       required this.department,
+      required this.note,
       required this.twoFactorAuthentication});
 
   @override
@@ -96,6 +100,7 @@ class User extends Equatable {
         accountStatus,
         level,
         department,
+        note,
         twoFactorAuthentication
       ];
 }

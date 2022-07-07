@@ -26,6 +26,7 @@ class UserModel extends User {
     required String address,
     required String identityDate,
     required String identityProvider,
+    required String note,
   }) : super(
             id: id,
             staffCode: staffCode,
@@ -44,6 +45,7 @@ class UserModel extends User {
             lastName: lastName,
             nickName: nickName,
             phone: phone,
+            note: note,
             twoFactorAuthentication: twoFactorAuthentication);
 
   factory UserModel.fromJson(Map<String, dynamic> json) =>

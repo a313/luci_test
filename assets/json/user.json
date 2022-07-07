@@ -19,7 +19,8 @@
         "identity_date": "15/06/1997",
         "identity_providers": "Cảnh sát biển Việt Nam",
         "identity_card_id": "1111 222 2225",
-        "account_status": "active"
+        "account_status": "active",
+        "note": "Với 3 năm kinh nghiệm cấp quản lý. Tôi tự tin làm giầu bất chấp."
     },
     {
         "id": 2,
@@ -41,7 +42,8 @@
         "identity_date": "15/06/1997",
         "identity_providers": "Cảnh sát biển Việt Nam",
         "identity_card_id": "1111 222 2225",
-        "account_status": "active"
+        "account_status": "active",
+        "note": "Với 3 năm kinh nghiệm cấp quản lý. Tôi tự tin làm giầu bất chấp."
     },
     {
         "id": 3,
@@ -63,7 +65,8 @@
         "identity_date": "15/06/1997",
         "identity_providers": "Cảnh sát biển Việt Nam",
         "identity_card_id": "1111 222 2225",
-        "account_status": "active"
+        "account_status": "active",
+        "note": "Với 3 năm kinh nghiệm cấp quản lý. Tôi tự tin làm giầu bất chấp."
     },
     {
         "id": 4,
@@ -81,11 +84,12 @@
         "department": "Kinh Doanh",
         "two_auth": true,
         "avatar": "https://toigingiuvedep.vn/wp-content/uploads/2021/05/hinh-anh-meo-munchkin.jpg",
-        "indentity_type": "passport",
+        "identity_type": "passport",
         "identity_date": "15/06/1997",
         "identity_providers": "Cảnh sát biển Việt Nam",
         "identity_card_id": "1111 222 2225",
-        "account_status": "active"
+        "account_status": "active",
+        "note": "Với 3 năm kinh nghiệm cấp quản lý. Tôi tự tin làm giầu bất chấp."
     },
     {
         "id": 5,
@@ -107,6 +111,7 @@
         "identity_date": "15/06/1997",
         "identity_providers": "Cảnh sát biển Việt Nam",
         "identity_card_id": "1111 222 2225",
-        "account_status": "active"
+        "account_status": "active",
+        "note": "Với 3 năm kinh nghiệm cấp quản lý. Tôi tự tin làm giầu bất chấp."
     }
 ]
