@@ -17,6 +17,7 @@ class UserComponent extends StatelessWidget {
     return Padding(
       padding: PAD_SYM_H16_V12,
       child: Row(
+        mainAxisSize: MainAxisSize.min,
         children: [
           CircleAvatar(
             backgroundImage: NetworkImage(user?.avt ?? ""),

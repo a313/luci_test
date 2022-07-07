@@ -45,16 +45,19 @@ class _PersonalInformation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      runAlignment: WrapAlignment.spaceBetween,
-      crossAxisAlignment: WrapCrossAlignment.end,
-      children: [
-        UserComponent(user: user),
-        const OptionalDropDownWidget(
-          titleOptional: 'Tùy chọn',
-          options: options,
-        )
-      ],
+    return SizedBox(
+      width: double.infinity,
+      child: Wrap(
+        alignment: WrapAlignment.spaceBetween,
+        crossAxisAlignment: WrapCrossAlignment.end,
+        children: [
+          UserComponent(user: user),
+          const OptionalDropDownWidget(
+            titleOptional: 'Tùy chọn',
+            options: options,
+          )
+        ],
+      ),
     );
   }
 }

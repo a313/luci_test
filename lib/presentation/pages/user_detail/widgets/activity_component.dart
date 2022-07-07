@@ -61,6 +61,7 @@ class _ActivitiesWidget extends StatelessWidget {
         const SearchComponent(),
         Expanded(
           child: CustomScrollView(
+            primary: true,
             slivers: List.generate(formatedData.keys.length, (index) {
               final key = formatedData.keys.elementAt(index);
               return ActivitySection(
