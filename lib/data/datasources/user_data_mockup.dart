@@ -26,8 +26,7 @@ class UserDataSourceMockup implements UserDataSource {
   Future<UserModel?> getUserById(int id) async {
     final listUser = await getListUser();
     for (var user in listUser) {
-      user.id == id;
-      return user;
+      if (user.id == id) return user;
     }
     return null;
   }
