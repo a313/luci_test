@@ -94,7 +94,7 @@ class _JobInfomationWidget extends StatelessWidget {
             content: 'Kế toán trưởng',
           ),
           const OptionalDropDownWidget(
-            titleOptional: 'Các module, tính năng được phép truy cập',
+            titleOptional: 'Các module',
             options: [],
           ),
           SIZED_BOX_H12,
@@ -103,7 +103,7 @@ class _JobInfomationWidget extends StatelessWidget {
             content: 'Dự án B',
           ),
           const OptionalDropDownWidget(
-            titleOptional: 'Các module, tính năng được phép truy cập',
+            titleOptional: 'Các module',
             options: [],
           ),
           SIZED_BOX_H12,
