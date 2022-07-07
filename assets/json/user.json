@@ -3,6 +3,7 @@
         "id": 1,
         "first_name": "Sebastian",
         "last_name": "Nommand",
+        "nick_name": "Nommand",
         "address": "123 Subway, NDC",
         "staff_code": "LUCI01",
         "email": "nguyenvana@luci.ai",
@@ -23,6 +24,7 @@
     {
         "id": 2,
         "first_name": "Huk",
+        "nick_name": "Huk",
         "last_name": "Nommand",
         "address": "123 Subway, NDC",
         "staff_code": "LUCI02",
@@ -44,6 +46,7 @@
     {
         "id": 3,
         "first_name": "StevenJob",
+        "nick_name": "Apple",
         "last_name": "Jon",
         "address": "123 Subway, NDC",
         "staff_code": "LUCI03",
@@ -65,6 +68,7 @@
     {
         "id": 4,
         "first_name": "David",
+        "nick_name": "David",
         "last_name": "Json",
         "address": "123 Subway, NDC",
         "staff_code": "LUCI04",
@@ -86,6 +90,7 @@
     {
         "id": 5,
         "first_name": "Torest",
+        "nick_name": "Torest",
         "last_name": "Yasuo",
         "address": "123 Subway, NDC",
         "staff_code": "LUCI05",

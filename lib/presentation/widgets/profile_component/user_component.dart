@@ -19,7 +19,10 @@ class UserComponent extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(user?.avt??"Chào các bạn"),
+          CircleAvatar(
+            backgroundImage: NetworkImage(user?.avt ?? ""),
+          ),
+          SIZED_BOX_W06,
           Column(
             children: [
               SIZED_BOX_W12,
