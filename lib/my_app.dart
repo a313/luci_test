@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:luci_test/core/base/global_keys.dart';
+import 'package:luci_test/domain/usecases/get_user_list.dart';
 import 'package:luci_test/injection.dart';
 import 'package:luci_test/presentation/pages/user_detail/user_detail_page.dart';
 
@@ -14,6 +15,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    final GetUserList getUserList = getIt();
+    final test = getUserList.call(NoParams());
+    test.then((value) {
+      print(value);
+    });
+
     return MultiBlocProvider(
       providers: [
         BlocProvider(

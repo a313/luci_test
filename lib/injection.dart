@@ -1,4 +1,5 @@
 import 'package:get_it/get_it.dart';
+import 'package:luci_test/domain/usecases/get_user_list.dart';
 
 import 'core/base/global_keys.dart';
 import 'core/network/network_info.dart';
@@ -16,6 +17,7 @@ void setup() {
 
   // Use cases
   getIt.registerLazySingleton(() => GetUserById(getIt()));
+  getIt.registerLazySingleton(() => GetUserList(getIt()));
   getIt.registerLazySingleton(() => GetUserActivityHistory(getIt()));
 
   // Repository
