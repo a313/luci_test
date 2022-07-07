@@ -12,10 +12,15 @@ class UserInitial extends UserState {}
 class UserLoaded extends UserState {
   final User user;
   const UserLoaded(this.user);
+
+  @override
+  List<Object> get props => [user];
 }
 
 class UserError extends UserState {
   final Failure failure;
 
   const UserError(this.failure);
+  @override
+  List<Object> get props => [failure];
 }
