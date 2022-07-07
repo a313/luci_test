@@ -24,6 +24,17 @@ enum ScreenType {
   big,
 }
 
+enum AccountStatus {
+  active,
+  disable,
+}
+
+enum Level {
+  staff,
+  lead,
+  head
+}
+
 /// Useful extensions on [DataStatus]
 extension FormzSubmissionStatusX on DataStatus {
   /// Indicates whether the form is in the process of being submitted.
