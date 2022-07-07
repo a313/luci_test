@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:luci_test/core/util/constants.dart';
 import 'package:luci_test/domain/entities/user.dart';
 import 'package:luci_test/share_widgets/optional_dropdown_widget.dart';
 

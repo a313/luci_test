@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:luci_test/core/util/util.dart';
-import 'package:luci_test/domain/usecases/get_user_by_id.dart';
 import 'package:luci_test/presentation/pages/user_detail/bloc/user/user_bloc.dart';
 
 import 'package:luci_test/presentation/widgets/job_infomation/job_information_component.dart';
 import 'package:luci_test/presentation/widgets/profile_component/personal_information.dart';
 import 'package:luci_test/presentation/widgets/profile_component/profile_component.dart';
-import 'package:luci_test/presentation/widgets/profile_component/user_component.dart';
 import 'package:luci_test/share_widgets/reponsive_widget.dart';
 
 import 'bloc/activity/activity_bloc.dart';
