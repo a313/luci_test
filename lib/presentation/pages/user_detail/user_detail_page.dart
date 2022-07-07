@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+import 'package:luci_test/presentation/bloc/activity_bloc.dart';
+import 'package:luci_test/presentation/widgets/activity_component.dart';
+import 'package:luci_test/presentation/widgets/job_infomation/job_information_component.dart';
+import 'package:luci_test/presentation/widgets/profile_component/profile_component.dart';
 import 'package:luci_test/share_widgets/reponsive_widget.dart';
-
-import 'bloc/activity/activity_bloc.dart';
-import 'widgets/activity_component.dart';
 
 class UserDetailPage extends StatefulWidget {
   final int userId;
@@ -29,24 +29,19 @@ class _UserDetailPageState extends State<UserDetailPage> {
       body: Reponsive(
           smallScene: (context) => const ActivityComponent(),
           bigScene: (context) => Row(
-                children: [
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
                   Expanded(
                     flex: 3,
-                    child: Container(
-                        width: double.infinity,
-                        height: double.infinity,
-                        color: Colors.green),
+                    child: ProfileComponent(),
                   ),
-                  const Expanded(
+                  Expanded(
                     flex: 7,
                     child: ActivityComponent(),
                   ),
                   Expanded(
                     flex: 3,
-                    child: Container(
-                        width: double.infinity,
-                        height: double.infinity,
-                        color: Colors.grey),
+                    child: JobInformationComponent(),
                   ),
                 ],
               )),

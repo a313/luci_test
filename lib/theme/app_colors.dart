@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart' hide Color;
 import 'package:flutter/material.dart';
 
 class AppColors {
@@ -9,4 +10,5 @@ class AppColors {
   static const grey = Color(0xFF999999);
   static const red = Color(0xFFff6a6a);
   static const fillColor = Color(0xFFF5F5F5);
+  static const backgroundColor = CupertinoColors.tertiarySystemFill;
 }
