@@ -77,8 +77,11 @@ class _ActivitiesWidget extends StatelessWidget {
 
   Map<DateTime, List<Activity>> handleData() {
     final Map<DateTime, List<Activity>> formattedData = {};
+    activities.sort(
+      (a, b) => b.time.compareTo(a.time),
+    );
     for (final act in activities) {
-      final month = act.time.dateWithoutDay();
+      final month = act.time.dateWithoutTime();
       if (formattedData.containsKey(month)) {
         final listSection = formattedData[month]!;
         listSection.add(act);
