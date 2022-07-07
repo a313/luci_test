@@ -26,6 +26,7 @@ UserModel _$UserModelFromJson(Map<String, dynamic> json) => UserModel(
       address: json['address'] as String,
       identityDate: json['identity_date'] as String,
       identityProvider: json['identity_providers'] as String,
+      note: json['note'] as String,
     );
 
 Map<String, dynamic> _$UserModelToJson(UserModel instance) => <String, dynamic>{
@@ -47,6 +48,7 @@ Map<String, dynamic> _$UserModelToJson(UserModel instance) => <String, dynamic>{
       'level': _$LevelEnumMap[instance.level],
       'department': instance.department,
       'two_auth': instance.twoFactorAuthentication,
+      'note': instance.note,
     };
 
 const _$AccountStatusEnumMap = {
