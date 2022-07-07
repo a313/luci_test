@@ -6,7 +6,9 @@ import 'package:luci_test/domain/usecases/get_user_list.dart';
 import 'package:luci_test/injection.dart';
 import 'package:luci_test/presentation/pages/user_detail/user_detail_page.dart';
 
-import 'presentation/bloc/activity_bloc.dart';
+import 'presentation/pages/user_detail/bloc/activity/activity_bloc.dart';
+import 'presentation/pages/user_detail/bloc/user/user_bloc.dart';
+
 // import 'package:luci_test/presentation/pages/user_list/user_list_page.dart';
 
 class MyApp extends StatelessWidget {
@@ -25,6 +27,9 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) => ActivityBloc(getUserActivityHistory: getIt()),
+        ),
+        BlocProvider(
+          create: (context) => UserBloc(getUserById: getIt()),
         ),
       ],
       child: MaterialApp(
