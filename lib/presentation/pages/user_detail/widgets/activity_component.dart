@@ -5,13 +5,13 @@ import 'package:flutter_sticky_header/flutter_sticky_header.dart';
 import 'package:luci_test/core/error/failures.dart';
 import 'package:luci_test/core/util/util.dart';
 import 'package:luci_test/domain/entities/activiy.dart';
-import 'package:luci_test/presentation/bloc/activity_bloc.dart';
+import 'package:luci_test/share_widgets/errors/network_error_widget.dart';
+import 'package:luci_test/share_widgets/errors/server_error_widget.dart';
+import 'package:luci_test/share_widgets/loading_widget.dart';
 import 'package:luci_test/theme/app_colors.dart';
 import 'package:luci_test/theme/app_fonts.dart';
 
-import '../../share_widgets/errors/network_error_widget.dart';
-import '../../share_widgets/errors/server_error_widget.dart';
-import '../../share_widgets/loading_widget.dart';
+import '../bloc/activity/activity_bloc.dart';
 
 class ActivityComponent extends StatelessWidget {
   const ActivityComponent({Key? key}) : super(key: key);

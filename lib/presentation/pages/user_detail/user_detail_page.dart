@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:luci_test/presentation/bloc/activity_bloc.dart';
-import 'package:luci_test/presentation/widgets/activity_component.dart';
+
 import 'package:luci_test/share_widgets/reponsive_widget.dart';
+
+import 'bloc/activity/activity_bloc.dart';
+import 'widgets/activity_component.dart';
 
 class UserDetailPage extends StatefulWidget {
   final int userId;

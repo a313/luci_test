@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:luci_test/core/error/failures.dart';
 import 'package:luci_test/core/util/util.dart';
 import 'package:luci_test/domain/entities/activiy.dart';
 
-import '../../core/error/failures.dart';
-import '../../domain/usecases/get_user_activity_history.dart';
+import '../../../../../domain/usecases/get_user_activity_history.dart';
 
 part 'activity_event.dart';
 part 'activity_state.dart';
