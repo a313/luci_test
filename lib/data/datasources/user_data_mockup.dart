@@ -23,9 +23,13 @@ class UserDataSourceMockup implements UserDataSource {
   }
 
   @override
-  Future<UserModel> getUserById(int id) {
-    // TODO: implement getUserById
-    throw UnimplementedError();
+  Future<UserModel?> getUserById(int id) async {
+    final listUser = await getListUser();
+    for (var user in listUser) {
+      user.id == id;
+      return user;
+    }
+    return null;
   }
 
   @override

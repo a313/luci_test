@@ -32,7 +32,11 @@ class UserRepositoryImpl implements UserRepository {
     if (await networkInfo.isConnected) {
       try {
         final user = await dataSource.getUserById(id);
-        return Right(user);
+        if (user != null) {
+          return Right(user);
+        } else {
+          return Left(UserNotFoundFailure());
+        }
       } catch (e) {
         return Left(ServerFailure());
       }
