@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:luci_test/theme/app_colors.dart';
 import 'package:luci_test/theme/app_fonts.dart';
 
 import '../../../core/util/util.dart';
@@ -17,41 +16,38 @@ class UserComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: PAD_SYM_H16_V12,
-      child: ColoredBox(
-        color: AppColors.backgroundColor,
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            CircleAvatar(
-              backgroundImage: NetworkImage(user?.avt ?? ""),
-            ),
-            SIZED_BOX_W06,
-            Column(
-              children: [
-                SIZED_BOX_W12,
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      (user?.firstName ?? "") + (user?.lastName ?? ""),
-                      style: AppFonts.size15(fontWeight: FontWeight.bold),
-                    ),
-                    SIZED_BOX_H04,
-                    Text(
-                      'Kế toán trưởng',
-                      style: AppFonts.size11(),
-                    ),
-                    SIZED_BOX_H04,
-                    Text(
-                      'Đang hoạt động',
-                      style: AppFonts.size11(),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ],
-        ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          CircleAvatar(
+            backgroundImage: NetworkImage(user?.avt ?? ""),
+          ),
+          SIZED_BOX_W06,
+          Column(
+            children: [
+              SIZED_BOX_W12,
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    (user?.firstName ?? "") + (user?.lastName ?? ""),
+                    style: AppFonts.size15(fontWeight: FontWeight.bold),
+                  ),
+                  SIZED_BOX_H04,
+                  Text(
+                    'Kế toán trưởng',
+                    style: AppFonts.size11(),
+                  ),
+                  SIZED_BOX_H04,
+                  Text(
+                    'Đang hoạt động',
+                    style: AppFonts.size11(),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

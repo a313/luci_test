@@ -3,10 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:luci_test/core/base/global_keys.dart';
 import 'package:luci_test/injection.dart';
-import 'package:luci_test/presentation/pages/user_detail/user_detail_page.dart';
-import 'package:luci_test/presentation/pages/user_list/user_list_page.dart';
 import 'package:luci_test/routes/routes_generator.dart';
-import 'package:luci_test/routes/routes_name.dart';
 
 import 'presentation/pages/user_detail/bloc/activity/activity_bloc.dart';
 import 'presentation/pages/user_detail/bloc/user/user_bloc.dart';

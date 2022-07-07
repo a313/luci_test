@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:luci_test/core/util/util.dart';
 import 'package:luci_test/presentation/pages/user_detail/bloc/user/user_bloc.dart';
 
 import 'package:luci_test/presentation/widgets/job_infomation/job_information_component.dart';
@@ -68,7 +67,6 @@ class _BigScreen extends StatelessWidget {
             child: Column(
               children: const [
                 PersonalInformation(),
-                SIZED_BOX_H12,
                 ProfileComponent(),
               ],
             ),

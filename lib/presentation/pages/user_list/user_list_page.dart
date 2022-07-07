@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:luci_test/core/util/util.dart';
-import 'package:luci_test/presentation/pages/user_detail/user_detail_page.dart';
 import 'package:luci_test/presentation/pages/user_list/bloc/user_list_bloc.dart';
 import 'package:luci_test/presentation/widgets/profile_component/user_component.dart';
 import 'package:luci_test/routes/routes_name.dart';

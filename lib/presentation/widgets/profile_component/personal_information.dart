@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:luci_test/domain/entities/user.dart';
 import 'package:luci_test/share_widgets/optional_dropdown_widget.dart';
+import 'package:luci_test/theme/app_colors.dart';
 
 import '../../pages/user_detail/bloc/user/user_bloc.dart';
 import 'user_component.dart';
@@ -44,18 +45,21 @@ class _PersonalInformation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      child: Wrap(
-        alignment: WrapAlignment.spaceBetween,
-        crossAxisAlignment: WrapCrossAlignment.end,
-        children: [
-          UserComponent(user: user),
-          const OptionalDropDownWidget(
-            titleOptional: 'Tùy chọn',
-            options: options,
-          )
-        ],
+    return ColoredBox(
+      color: AppColors.backgroundColor,
+      child: SizedBox(
+        width: double.infinity,
+        child: Wrap(
+          alignment: WrapAlignment.spaceBetween,
+          crossAxisAlignment: WrapCrossAlignment.end,
+          children: [
+            UserComponent(user: user),
+            const OptionalDropDownWidget(
+              titleOptional: 'Tùy chọn',
+              options: options,
+            )
+          ],
+        ),
       ),
     );
   }
